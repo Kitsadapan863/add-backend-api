@@ -6,6 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+console.log("SERVER START", new Date());
 // 🔹 เชื่อม MongoDB
 mongoose.connect(
     "mongodb+srv://kitsadapankangna685_db_user:j98ctoSFUArbBXyS@cluster0.4l5xm0c.mongodb.net/adddb"
@@ -52,3 +53,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log("Server running on port", PORT);
 });
+
